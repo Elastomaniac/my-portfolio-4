@@ -2,7 +2,7 @@
 
 let money = 80000
 let profit = "15000"
-let expenses = "питание 10000, проезд 5000"
+let expenses = "Питание 10000, Проезд 5000"
 const purpose = 500000
 const period = 6
 
@@ -14,3 +14,8 @@ console.log(`Цель заработать ${purpose} рублей`)
 
 let budgetDay = (money + (+profit))/30
 console.log(budgetDay)
+
+
+console.log(expenses.toLowerCase())
+let arr = expenses.split("")
+console.log(arr)
