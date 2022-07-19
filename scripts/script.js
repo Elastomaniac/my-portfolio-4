@@ -11,3 +11,6 @@ console.log(typeof profit)
 console.log(expenses.length)
 console.log(`Период равен ${period} месяцев`)
 console.log(`Цель заработать ${purpose} рублей`)
+
+let budgetDay = (money + (+profit))/30
+console.log(budgetDay)
