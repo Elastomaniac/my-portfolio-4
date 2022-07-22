@@ -1,6 +1,6 @@
 'use strict'
 const money = prompt('Ваш месячный доход?')
-// const expenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую')
+const expenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую')
 const amount = prompt('Во сколько обойдуться обязательные статьи расходов?')
 const deposit = confirm('Есть ли у вас вклад в банке?')
 let budgetMonth = money - amount
