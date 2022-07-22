@@ -1,21 +1,22 @@
 'use strict'
+const money = prompt('Ваш месячный доход?')
+// const expenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую')
+const amount = prompt('Во сколько обойдуться обязательные статьи расходов?')
+const deposit = confirm('Есть ли у вас вклад в банке?')
+let budgetMonth = money - amount
+console.log(budgetMonth)
+const purpose = prompt('сколько Вы хотите накопить?')
+const months = purpose / budgetMonth
+console.log(Math.ceil(months))
+const budgetDay = (money - amount) / 30
+console.log(Math.floor(budgetDay))
 
-let money = 80000
-let profit = "15000"
-let expenses = "Питание 10000, Проезд 5000"
-const purpose = 500000
-const period = 6
-
-console.log(typeof money)
-console.log(typeof profit)
-console.log(expenses.length)
-console.log(`Период равен ${period} месяцев`)
-console.log(`Цель заработать ${purpose} рублей`)
-
-let budgetDay = (money + (+profit))/30
-console.log(budgetDay)
-
-
-console.log(expenses.toLowerCase())
-let arr = expenses.split("")
-console.log(arr)
+if (budgetMonth > 60000 ) {
+  alert('У вас высокий уровень дохода')
+} else if (budgetMonth > 30000 && budgetMonth < 60000) {
+  alert('У вас средний уровень дохода')
+} else if (budgetMonth > 0 && budgetMonth < 30000) {
+  alert('К сожалению у вас уровень дохода ниже среднего')
+} else {
+  alert('Что то пошло не так')
+}
