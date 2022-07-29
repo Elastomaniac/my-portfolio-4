@@ -1,33 +1,37 @@
 'use strict'
-const money = +prompt('Ваш месячный доход?')
 
-const amount = +prompt('Во сколько обойдуться обязательные статьи расходов?')
+let data = prompt('Угадай число от 1 до 10', 1)
+let prNum = Math.floor((Math.random() * 10) + 1)
 
-const purpose = +prompt('сколько Вы хотите накопить?')
-
-const extraMoney = +prompt(`Перечислите возможный доход за ваши дополнительные работы: ?`)
-
-function getAccumulatedIncome (money, amount, extraMoney) {
-  const result = money - amount + extraMoney
-  return result
+if (data == prNum) {
+  alert('Вы угадали!')
+} else if (data < prNum) {
+  alert('Ваше число меньше загаданного компьютером')
+} else if (data > prNum){
+  alert('Ваше число больше загаданного компьютером')
+} else {
+  alert('Введи число!')
 }
 
-const accumulatedIncome = getAccumulatedIncome(money, amount, extraMoney)
-const months = purpose / accumulatedIncome
-console.log(Math.ceil(months))
+//Замыкание
 
-function getTargetMonth (purpose, accumulatedIncome) {
-  return Math.ceil (purpose/accumulatedIncome)
+const funcOne = () => {
+  let num = 4
+  let user = prompt('Угадайте загаданное число')
+
+  const funcTwo = () => {
+    
+    if(num > user) {
+      alert('Загаданное число меньше')
+    } else if (num < user) {
+      alert('Загаданное число больше')
+    } else if (num == user) {
+      alert('Поздравляю, Вы угадали!!!')
+    } else {
+      alert('Введи число!')
+    }
+    return
+  }
+  funcTwo()
 }
-
-const targetMonth = getTargetMonth(purpose, accumulatedIncome)
-
-
-
-const budgetDay = (money - amount + extraMoney) / 30 
-
-console.log('Ваш бюджет на месяц с учетом ваших расходов составляет: ', accumulatedIncome)
-
-console.log(`Ваша цель накопить ${purpose} с учетом всех ваших расходов будет достигнута через`, targetMonth + ' месяца')
-
-console.log('Дневной бюджет', budgetDay)
+funcOne()
