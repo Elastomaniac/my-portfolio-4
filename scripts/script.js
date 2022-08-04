@@ -1,11 +1,18 @@
 'use strict'
 const money = +prompt('Ваш месячный доход?')
+while (money != Number) {
+  +prompt('введите ЧИСЛО')
+}
 
 const amount = +prompt('Во сколько обойдуться обязательные статьи расходов?')
 
 const purpose = +prompt('сколько Вы хотите накопить?')
 
 const extraMoney = +prompt(`Перечислите возможный доход за ваши дополнительные работы: ?`)
+
+
+
+
 
 function getAccumulatedIncome (money, amount, extraMoney) {
   const result = money - amount + extraMoney
