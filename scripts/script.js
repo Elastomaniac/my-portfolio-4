@@ -1,14 +1,28 @@
 'use strict'
-const money = +prompt('Ваш месячный доход?')
-while (money != Number) {
-  +prompt('введите ЧИСЛО')
+
+let money = +prompt('Ваш месячный доход?') 
+while (isNaN(money)) {
+  alert ('Введите число');
+  money = +prompt('Ваш месячный доход?') 
 }
 
-const amount = +prompt('Во сколько обойдуться обязательные статьи расходов?')
+// while (money != Number) {
+//   +prompt('введите ЧИСЛО')
+// }
+
+let amount = +prompt('Во сколько обойдуться обязательные статьи расходов?')
+while (isNaN(amount)) {
+  alert ('Введите число');
+  amount = +prompt('Во сколько обойдуться обязательные статьи расходов?') 
+}
 
 const purpose = +prompt('сколько Вы хотите накопить?')
 
-const extraMoney = +prompt(`Перечислите возможный доход за ваши дополнительные работы: ?`)
+let extraMoney = +prompt(`Перечислите возможный доход за ваши дополнительные работы: ?`)
+while (isNaN(extraMoney)) {
+  alert ('Введите число');
+  extraMoney = +prompt(`Перечислите возможный доход за ваши дополнительные работы: ?`) 
+}
 
 
 
