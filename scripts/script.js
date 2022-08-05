@@ -6,9 +6,6 @@ while (isNaN(money)) {
   money = +prompt('Ваш месячный доход?') 
 }
 
-// while (money != Number) {
-//   +prompt('введите ЧИСЛО')
-// }
 
 let amount = +prompt('Во сколько обойдуться обязательные статьи расходов?')
 while (isNaN(amount)) {
@@ -43,7 +40,10 @@ function getTargetMonth (purpose, accumulatedIncome) {
 
 const targetMonth = getTargetMonth(purpose, accumulatedIncome)
 
-
+while (getTargetMonth () < 0) {
+  console.log ('Цель не будет достигнута')
+  break
+}
 
 const budgetDay = (money - amount + extraMoney) / 30 
 
