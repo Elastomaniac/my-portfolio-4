@@ -38,14 +38,19 @@ function getTargetMonth (purpose, accumulatedIncome) {
   return Math.ceil (purpose/accumulatedIncome)
 }
 
+
+console.log(purpose)
+console.log(accumulatedIncome)
 const targetMonth = getTargetMonth(purpose, accumulatedIncome)
 
-while (getTargetMonth () < 0) {
-  console.log ('Цель не будет достигнута')
-  break
-}
+console.log('getTargetMonth', targetMonth)
+
+if (targetMonth > 0) console.log ('Цель не будет достигнута')
 
 const budgetDay = (money - amount + extraMoney) / 30 
+
+
+
 
 console.log('Ваш бюджет на месяц с учетом ваших расходов составляет: ', accumulatedIncome)
 
