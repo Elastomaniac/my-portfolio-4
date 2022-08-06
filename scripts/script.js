@@ -13,7 +13,7 @@ while (isNaN(amount)) {
   amount = +prompt('Во сколько обойдуться обязательные статьи расходов?') 
 }
 
-const purpose = +prompt('сколько Вы хотите накопить?')
+let purpose = +prompt('сколько Вы хотите накопить?')
 
 let extraMoney = +prompt(`Перечислите возможный доход за ваши дополнительные работы: ?`)
 while (isNaN(extraMoney)) {
@@ -26,12 +26,12 @@ while (isNaN(extraMoney)) {
 
 
 function getAccumulatedIncome (money, amount, extraMoney) {
-  const result = money - amount + extraMoney
+  let result = money - amount + extraMoney
   return result
 }
 
-const accumulatedIncome = getAccumulatedIncome(money, amount, extraMoney)
-const months = purpose / accumulatedIncome
+let accumulatedIncome = getAccumulatedIncome(money, amount, extraMoney)
+let months = purpose / accumulatedIncome
 console.log(Math.ceil(months))
 
 function getTargetMonth (purpose, accumulatedIncome) {
@@ -41,13 +41,13 @@ function getTargetMonth (purpose, accumulatedIncome) {
 
 console.log(purpose)
 console.log(accumulatedIncome)
-const targetMonth = getTargetMonth(purpose, accumulatedIncome)
+let targetMonth = getTargetMonth(purpose, accumulatedIncome)
 
 console.log('getTargetMonth', targetMonth)
 
 if (targetMonth > 0) console.log ('Цель не будет достигнута')
 
-const budgetDay = (money - amount + extraMoney) / 30 
+let budgetDay = (money - amount + extraMoney) / 30 
 
 
 
