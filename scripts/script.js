@@ -12,6 +12,10 @@ fetch('https://reqres.in/api/users?per_page=12')
       console.log(body.data)
       body.data.forEach((item) => {
         console.log(item.last_name)
+
+        body.data.filter (item => item.last_name.startsWith('F')).forEach(item=>{
+        console.log(item.last_name)
+        })
       })
     })
     .catch((e) => {
@@ -19,10 +23,10 @@ fetch('https://reqres.in/api/users?per_page=12')
     })
 
     
-console.log('-----------')
 
-console.log('Пункт №1:')
+
+
     
 console.log('-----------')
 
-console.log('Пункт №2:')
+console.log('Пункт №1:')
