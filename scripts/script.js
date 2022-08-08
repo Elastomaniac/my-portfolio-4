@@ -1,9 +1,7 @@
 'use strict'
 
 
-console.log('-----------');
 
-console.log('Пункт №1:')
 
 
 fetch('https://reqres.in/api/users?per_page=12')
@@ -13,17 +11,18 @@ fetch('https://reqres.in/api/users?per_page=12')
     .then((body) => {
       console.log(body.data)
       body.data.forEach((item) => {
-        if (item.first_name.length < 5) {
-        console.log(item.first_name)
-        }
+        console.log(item.last_name)
       })
     })
     .catch((e) => {
       console.log(e)
     })
 
-
     
-console.log('-----------');
+console.log('-----------')
+
+console.log('Пункт №1:')
+    
+console.log('-----------')
 
 console.log('Пункт №2:')
