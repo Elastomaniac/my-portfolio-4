@@ -1,0 +1,24 @@
+body {
+  background-color: #1B2473;
+  .form {
+    background-color: #fff;
+    width: 600px;
+    height: 412px;
+    border-radius: 20px;
+    h1 {
+      color:#787878;
+      text-align: center;
+      font-size: 50px;
+    }
+    button {
+      display: block;
+      width: 180px;
+      height: 52px;
+      border-radius: 10px;
+      margin: 0 auto;
+      background-color: #1A226B;
+      color: #fff;
+    }
+  }
+}
+
