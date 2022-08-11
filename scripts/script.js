@@ -5,8 +5,9 @@ fetch('https://reqres.in/api/users?per_page=12')
     })
     .then((body) => {
       console.log(body.data)
-      const filterResult = body.data.filter(item => item.last_name.startsWith('F')).forEach(el => console.log(el.last_name))
+        console.log(body.data.filter(item => item.last_name.startsWith('F')).reduce((acc, item) => acc + item.first_name + ' ' + item.last_name + ', ', ''))
 
+        
     })
     .catch((e) => {
       console.log(e)
