@@ -10,13 +10,18 @@ fetch('https://reqres.in/api/users?per_page=12')
     })
     .then((body) => {
       console.log(body.data)
-      
+      console.log('-----------')
+      console.log('Пункт №2:')
+      console.log('-----------')
+      body.data.forEach((element) => {
+        console.log(element.last_name)
+      })
 
       console.log('-----------')
       console.log('Пункт №3:')
       console.log('-----------')
 
-      console.log(body.data.filter(item => item.last_name.startsWith('F')).reduce((acc, item) => acc + item.first_name + ' ' + item.last_name + ', ', ''))
+      body.data.filter(item => item.last_name.startsWith('F')).forEach(element => console.log(element.last_name))
 
       console.log('-----------')
       console.log('Пункт №4:')
