@@ -9,15 +9,55 @@
   <title>Exam</title>
 </head>
 <body>
-  <form class="form" action="">
-    <h1>Регистрация</h1>
-    <p class="star">*</p><p class=""email>Email</p>
-    <input type="text" placeholder="Введите email">
-    <p class="star">*</p><p class="password">Пароль</p>
-    <input type="password" placeholder="Введите пароль">
-    <p class="star">*</p><label for="checkbox">Я согласен с Правилами пользования приложением<input type="checkbox" id="checkbox"></label>
-    <button class="registration">Регистрация</button>
-  </form>
+  <div class="wrapper">
+    <form class="form form-register" action="">
+      <h2 class="form-title">Регистрация</h2>
+
+      <div class="form__item">
+        <span class="form__item-title">Email</span>
+        <input type="text" class="form__item-input"placeholder="Введите email">
+      </div>
+
+      <div class="form__item">
+        <span class="form__item-title">Пароль</span>
+        <input type="password" class="form__item-input"placeholder="Введите пароль">
+      </div>
+
+      <div class="form__item">
+        <input type="checkbox" id="check">
+        <label for="check">Я согласен с Правилами пользования приложением</label>
+      </div>
+      <button class="form__submit" >Регистрация</button>
+    </form>
+
+
+
+
+    <form class="form form-auth" action="">
+      <h2 class="form-title">Вход</h2>
+
+      <div class="form__item">
+        <span class="form__item-title">Email</span>
+        <input type="text" placeholder="Введите email" class="form__item-input">
+        <span class="error" id="error_null">Поле обязательно для заполнения</span><br>
+        <span class="error" id="error_valid">Email невалидный</span>
+      </div>
+
+      <div class="form__item">
+        <span class="form__item-title">Пароль</span>
+        <input type="password" class="form__item-input" placeholder="Введите пароль">
+      </div>
+
+      <div class="form__item">
+        <input type="checkbox" id="check">
+        <label for="check">Я согласен получать обновления на почту</label>
+      </div>
+
+
+      <button class="form__submit">Вход</button>
+    </form>
+  </div>
+
 
 
   <script src="./scripts/script.js"></script>

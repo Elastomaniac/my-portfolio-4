@@ -1,23 +1,59 @@
-body {
+* {
+  box-sizing: border-box;
+}
+
+.form-register {
+  display: none;
+}
+
+.wrapper {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
   background-color: #1B2473;
 }
-body .form {
+.wrapper .form {
+  padding: 30px 45px 25px 45px;
   background-color: #fff;
   width: 600px;
   height: 412px;
   border-radius: 20px;
+  margin-top: 82px;
 }
-body .form h1 {
+.wrapper .form h2 {
   color: #787878;
   text-align: center;
   font-size: 50px;
 }
-body .form button {
+.wrapper .form .form-title {
+  margin-bottom: 13px;
+  text-align: center;
+}
+.wrapper .form .form__item {
+  position: relative;
+  margin-bottom: 13px;
+}
+.wrapper .form .form__item::before {
+  content: "*";
+  position: absolute;
+  left: -10px;
+}
+.wrapper .form .form__item-title {
+  display: block;
+  margin-bottom: 3px;
+}
+.wrapper .form .form__item-input {
+  display: block;
+  width: 100%;
+}
+.wrapper .form .form__submit {
+  margin: 56px auto 26px auto;
   display: block;
   width: 180px;
   height: 52px;
   border-radius: 10px;
-  margin: 0 auto;
   background-color: #1A226B;
   color: #fff;
 }/*# sourceMappingURL=style.css.map */
