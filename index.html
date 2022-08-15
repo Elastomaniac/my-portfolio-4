@@ -10,25 +10,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <form class="form form-register" action="">
-      <h2 class="form-title">Регистрация</h2>
 
-      <div class="form__item">
-        <span class="form__item-title">Email</span>
-        <input type="text" class="form__item-input"placeholder="Введите email">
-      </div>
-
-      <div class="form__item">
-        <span class="form__item-title">Пароль</span>
-        <input type="password" class="form__item-input"placeholder="Введите пароль">
-      </div>
-
-      <div class="form__item">
-        <input type="checkbox" id="check">
-        <label for="check">Я согласен с Правилами пользования приложением</label>
-      </div>
-      <button class="form__submit" >Регистрация</button>
-    </form>
 
 
 
@@ -37,7 +19,7 @@
       <h2 class="form-title">Вход</h2>
 
       <div class="form__item">
-        <span class="form__item-title">Email</span>
+        <span class="form__item-title" id="idemail"><em>Email</em>Новый заголовок</span>
         <input type="text" placeholder="Введите email" class="form__item-input">
         <span class="error" id="error_null">Поле обязательно для заполнения</span><br>
         <span class="error" id="error_valid">Email невалидный</span>
@@ -49,15 +31,36 @@
       </div>
 
       <div class="form__item">
-        <input type="checkbox" id="check">
-        <label for="check">Я согласен получать обновления на почту</label>
+        <input type="checkbox" id="check2">
+        <label for="check2">Я согласен получать обновления на почту</label>
       </div>
 
-
-      <button class="form__submit">Вход</button>
+      <button class="form__submit" id="form_submit">Вход</button>
     </form>
   </div>
 
+
+
+
+  <form class="form form-register" action="">
+    <h2 class="form-title">Регистрация</h2>
+
+    <div class="form__item">
+      <span class="form__item-title">Email</span>
+      <input type="text" class="form__item-input"placeholder="Введите email">
+    </div>
+
+    <div class="form__item">
+      <span class="form__item-title">Пароль</span>
+      <input type="password" class="form__item-input"placeholder="Введите пароль">
+    </div>
+
+    <div class="form__item">
+      <input type="checkbox" id="check1">
+      <label for="check1">Я согласен с Правилами пользования приложением</label>
+    </div>
+    <button class="form__submit">Регистрация</button>
+  </form>
 
 
   <script src="./scripts/script.js"></script>
