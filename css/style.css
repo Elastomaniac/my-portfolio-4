@@ -1,8 +1,14 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 .form-register {
+  display: block;
+}
+
+.form-auth {
   display: none;
 }
 
@@ -58,6 +64,8 @@
   color: #fff;
 }
 
-.text-span {
-  font-style: italic;
+.error {
+  color: #CB2424;
+  font-size: 10px;
+  display: none;
 }/*# sourceMappingURL=style.css.map */
