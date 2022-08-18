@@ -31,8 +31,14 @@ const validRegistration = () => {
   } else {
     errorEmailRegistration.style.display = 'none'
     emailRegistration.style.borderColor = 'inherit'
-  }
 
+    if(!validateEmail(emailResult)){
+      emailValid.style.display = 'block'
+    } else {
+      emailValid.style.display = 'none'
+    }
+  }
+  
   if (passwordResult.length == '') {
     errorPasswordRegistration.style.display = 'block'
     passwordRegistration.style.borderColor = 'red'
@@ -44,15 +50,16 @@ const validRegistration = () => {
   //проверка на длину пароля
   if (passwordResult.length < 8) {
     passwordErrorLength.style.display = 'block'
-  } else {
+  } else if (passwordResult.length < 8 && passwordResult.length == ''){
     passwordErrorLength.style.display = 'none'
   }
+
   //проверка валидности email поля
-  if(!validateEmail(emailResult)){
-    emailValid.style.display = 'block'
-  } else {
-    emailValid.style.display = 'none'
-  }
+  // if(!validateEmail(emailResult)){
+  //   emailValid.style.display = 'block'
+  // } else {
+  //   emailValid.style.display = 'none'
+  // }
 }
 
 const validateEmail = (email) => {
@@ -60,6 +67,5 @@ const validateEmail = (email) => {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
   return re.test(String(email).toLowerCase())
-
 }
 
