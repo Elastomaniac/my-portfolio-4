@@ -16,6 +16,7 @@ let emailResult = ''
 let passwordResult = ''
 let checkResult = false
 let user = {}
+
 let emailValidUser, passwordValid, checkedValid = false
 
 emailRegistration.addEventListener('input', (even) => {
@@ -92,15 +93,10 @@ const validateEmail = (email) => {
 
   return re.test(String(email).toLowerCase())
 }
-console.log(emailValidUser)
-console.log(passwordValid)
-console.log(checkedValid)
 
 
 const localDate = () => {
   if (emailValidUser && passwordValid && checkedValid) {
-    console.log()
     localStorage.user = JSON.stringify(user)
-    console.log(localStorage)
   }
 }
