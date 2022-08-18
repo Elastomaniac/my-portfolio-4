@@ -28,38 +28,34 @@ const validRegistration = () => {
   if (emailResult.length == '') {
     errorEmailRegistration.style.display = 'block'
     emailRegistration.style.borderColor = 'red'
+    emailValid.style.display = 'none'
   } else {
     errorEmailRegistration.style.display = 'none'
     emailRegistration.style.borderColor = 'inherit'
 
+    //проверка валидности email поля
     if(!validateEmail(emailResult)){
       emailValid.style.display = 'block'
     } else {
       emailValid.style.display = 'none'
     }
   }
-  
+
   if (passwordResult.length == '') {
     errorPasswordRegistration.style.display = 'block'
     passwordRegistration.style.borderColor = 'red'
+    passwordErrorLength.style.display = 'none'
   } else {
     errorPasswordRegistration.style.display = 'none'
     passwordRegistration.style.borderColor = 'inherit'
-  }
 
-  //проверка на длину пароля
-  if (passwordResult.length < 8) {
-    passwordErrorLength.style.display = 'block'
-  } else if (passwordResult.length < 8 && passwordResult.length == ''){
-    passwordErrorLength.style.display = 'none'
+    //проверка на длину пароля
+    if (passwordResult.length < 8) {
+      passwordErrorLength.style.display = 'block'
+    } else {
+      passwordErrorLength.style.display = 'none'
+    }
   }
-
-  //проверка валидности email поля
-  // if(!validateEmail(emailResult)){
-  //   emailValid.style.display = 'block'
-  // } else {
-  //   emailValid.style.display = 'none'
-  // }
 }
 
 const validateEmail = (email) => {
