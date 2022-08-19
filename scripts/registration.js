@@ -12,6 +12,9 @@ let emailValid = document.querySelector('#email-valid')
 let checkboxRegistration = document.querySelector('#check-reg')
 let checkboxError = document.querySelector('#check-empty')
 
+let fieldEmail = document.querySelector('#field-email')
+let fieldPassword = document.querySelector('#field-password')
+
 let emailResult = ''
 let passwordResult = ''
 let checkResult = false
@@ -44,6 +47,7 @@ const validRegistration = () => {
     emailRegistration.style.borderColor = 'red'
     emailValid.style.display = 'none'
     emailValidUser = false
+    fieldEmail.style.color = '#CB2424'
   } else {
     errorEmailRegistration.style.display = 'none'
     emailRegistration.style.borderColor = 'inherit'
@@ -64,6 +68,7 @@ const validRegistration = () => {
     passwordRegistration.style.borderColor = 'red'
     passwordErrorLength.style.display = 'none'
     passwordValid = false
+    fieldPassword.style.color = '#CB2424'
   } else {
     errorPasswordRegistration.style.display = 'none'
     passwordRegistration.style.borderColor = 'inherit'
