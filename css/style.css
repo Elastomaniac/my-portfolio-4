@@ -6,6 +6,15 @@
 
 .form-register {
   display: block;
+  position: relative;
+}
+
+#button-auth {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  color: #1A226B;
+  background-color: #fff;
 }
 
 .form-auth {
