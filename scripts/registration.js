@@ -3,6 +3,7 @@ let emailRegistration = document.querySelector('#email-reg')
 let passwordRegistration = document.querySelector('#password-reg')
 let btnRegistration = document.querySelector('#btn-reg')
 
+
 let errorEmailRegistration = document.querySelector('#email-empty')
 let errorPasswordRegistration = document.querySelector('#password-empty')
 
@@ -14,6 +15,8 @@ let checkboxError = document.querySelector('#check-empty')
 
 let fieldEmail = document.querySelector('#field-email')
 let fieldPassword = document.querySelector('#field-password')
+
+let fieldCheck = document.querySelector('#field-check')
 
 let emailResult = ''
 let passwordResult = ''
@@ -81,6 +84,12 @@ const validRegistration = () => {
       user.password = passwordResult
       passwordValid = true
     }
+  }
+
+  if(checkboxRegistration.checked) {
+    fieldCheck.classList.remove('error-checkbox')
+  } else {
+    fieldCheck.classList.add('error-checkbox')
   }
 
   if(!checkResult) {

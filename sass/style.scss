@@ -79,14 +79,14 @@
   display: none;
 }
 
-// #field-email {
-//   color: #CB2424;
-// }
 
-// #field-password {
-//   color: #CB2424;
-// }
+.error-checkbox {
+  display: block;
+}
 
-// #field-check {
-//   color: #CB2424;
-// }
+.error-checkbox::before {
+  content: '*';
+  position: absolute;
+  left: -50px;
+  color: #CB2424;
+}

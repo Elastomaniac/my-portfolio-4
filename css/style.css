@@ -77,4 +77,15 @@
   color: #CB2424;
   font-size: 10px;
   display: none;
+}
+
+.error-checkbox {
+  display: block;
+}
+
+.error-checkbox::before {
+  content: "*";
+  position: absolute;
+  left: -50px;
+  color: #CB2424;
 }/*# sourceMappingURL=style.css.map */
