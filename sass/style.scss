@@ -90,3 +90,55 @@
   left: -50px;
   color: #CB2424;
 }
+
+// начинаем работать с кастомным чекбоксом
+.custom-checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  
+
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: white;
+  }
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;
+  }
+
+  
+  &:checked + label:before {
+    border: 2px solid #787878;
+    border-radius: 2px;
+  }
+}
