@@ -95,9 +95,11 @@ const validRegistration = () => {
   if(!checkResult) {
     checkboxError.style.display = 'block'
     checkedValid = false
+    // itemLabelRegistration.classList.add('error_color-checkbox')
   } else {
     checkboxError.style.display = 'none'
     checkedValid = true
+    // itemLabelRegistration.classList.remove('error_color-checkbox')
   }
 }
 
